@@ -12,40 +12,11 @@ with open("data.csv", "w+") as csvfile:
          "Seed"])
 csvfile.close()
 
-urls = ['https://halite.io/play?game_id=1715764',
-        'https://halite.io/play?game_id=1715754',
-        'https://halite.io/play?game_id=1715651',
-        'https://halite.io/play?game_id=1715572',
-        'https://halite.io/play?game_id=1715129',
-        'https://halite.io/play?game_id=1715063',
-        'https://halite.io/play?game_id=1714897',
-        'https://halite.io/play?game_id=1714379',
-        'https://halite.io/play?game_id=1713274',
-        'https://halite.io/play?game_id=1716490',
-        'https://halite.io/play?game_id=1713190',
-        'https://halite.io/play?game_id=1708345',
-        'https://halite.io/play?game_id=1708249',
-        'https://halite.io/play?game_id=1707210',
-        'https://halite.io/play?game_id=1707108',
-        'https://halite.io/play?game_id=1714126',
-        'https://halite.io/play?game_id=1708249',
-        'https://halite.io/play?game_id=1708403',
-        'https://halite.io/play?game_id=1705406',
-        'https://halite.io/play?game_id=1703381',
-        'https://halite.io/play?game_id=1705627',
-        'https://halite.io/play?game_id=1706912',
-        'https://halite.io/play?game_id=1701005',
-        'https://halite.io/play?game_id=1702679',
-        'https://halite.io/play?game_id=1696349',
-        'https://halite.io/play?game_id=1715129',
-        'https://halite.io/play?game_id=1715754',
-        'https://halite.io/play?game_id=1704553',
-        'https://halite.io/play?game_id=1703371',
-        'https://halite.io/play?game_id=1701373',
-        'https://halite.io/play?game_id=1701395',
-        'https://halite.io/play?game_id=1699306',
-        'https://halite.io/play?game_id=1699231',
-        'https://halite.io/play?game_id=1699180']
+game_ids = ['1715764','1715754','1715651','1715572','1715129','1715063','1714897','1714379','1713274','1716490','1713190'
+           ,'1708345','1708249','1707210','1707108','1714126','1708249','1708403','1705406','1703381','1705627','1706912'
+           ,'1701005','1702679','1696349','1715129','1715754','1704553','1703371','1701373','1701395','1699306','1699231'
+           ,'1699180'] 
+urls = ['https://halite.io/play?game_id=' + g_id for g_id in game_ids ]
 
 for x in range(len(urls)):
     driver = webdriver.Chrome()
